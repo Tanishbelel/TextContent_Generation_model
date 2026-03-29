@@ -6,98 +6,319 @@ ERROR    Non-retryable model provider error: {"error":{"message":"The model `lla
 
 ERROR    Error in Agent run: {"error":{"message":"The model `llama-3.1-70b-versatile` has been decommissioned and is no longer supported. Please refer to
          https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.","type":"invalid_request_error","code":"model_decommissioned"}}   
-![Demo](./assets/demo.png)
+# 🚀 ContentFlow - Professional SEO Content Optimization AI
 
-# SEO Content Agent Team with Groq & SerpAPI
+> **AI-Powered Content Optimization Platform** — Transform your content strategy with intelligent SEO analysis, competitor insights, and AI-driven optimization recommendations.
 
-AI-powered content optimization workflow for Google AI Search ranking. This advanced multi-agent system helps content teams either optimize existing articles or generate SEO-optimized content briefs before writing.
+[![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://python.org)
+[![Streamlit](https://img.shields.io/badge/framework-Streamlit-ff69b4.svg)](https://streamlit.io)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-## Features
+---
 
-- **Two Operation Modes**:
+## 📋 Overview
 
-  - **Existing Article Optimization**: Analyze and improve existing content (from URL or pasted text)
-  - **Pre-Writing Content Brief**: Generate SEO-optimized guidelines before writing
+ContentFlow is an advanced AI-powered platform that helps content teams and SEO professionals optimize their content strategy through comprehensive keyword research, competitor analysis, and intelligent content recommendations.
 
-- **Comprehensive SEO Research**:
+**Two powerful modes:**
+- 🎯 **Pre-Writing Brief** - Generate SEO strategy before you write
+- ⚡ **Content Optimization** - Improve existing articles for better rankings
 
-  - Google AI Mode & AI Overview analysis
-  - Keyword extraction and clustering
-  - Related questions and search intent analysis
-  - Competitor content analysis
+---
 
-- **Actionable Outputs**:
+## ✨ Key Features
 
-  - Search insights and keyword research reports
-  - Content audit with prioritized recommendations
-  - Section-level rewrites with keyword optimization
-  - Pre-writing content briefs with structure and guidelines
+### 🔍 **Comprehensive Keyword Research**
+- AI-powered keyword discovery and clustering
+- Search volume and intent analysis
+- Long-tail keyword opportunities
+- Related questions and search patterns
 
-- **Interactive Streamlit UI**:
-  - Clean, modern interface with real-time progress tracking
-  - Easy input methods (topic, URL, or title+content)
-  - All reports displayed in a flowing document format
-  - Dark mode compatible
+### 📊 **Competitor Analysis**
+- Analyze top-ranking content
+- Identify ranking factors
+- Content structure insights
+- Benchmark against competitors
 
-## Prerequisites
+### 📋 **Content Audit & Recommendations**
+- Gap analysis for existing content
+- Optimization opportunities identification
+- E-E-A-T signal assessment
+- Actionable improvement suggestions
 
-- Python 3.11 or higher
-- [uv](https://github.com/astral-sh/uv) package manager (recommended) or pip
-- Nebius API key (get it from [Nebius Token Factory](https://dub.sh/nebius))
-- SerpAPI key (for Google AI Mode and AI Overview searches - get it from [SerpAPI](https://serpapi.com/))
+### ✏️ **AI-Powered Content Rewrites**
+- Section-level optimization suggestions
+- Natural keyword integration
+- Improved readability and engagement
+- SEO-friendly recommendations
 
-## Installation
+### 🎯 **Google AI Search Ready**
+- Optimized for Google AI Overview
+- Answer-focused content strategies
+- Attribution signal enhancement
+- Visibility recommendations
 
-1. Navigate to the project directory:
+### 🎨 **Professional Web Interface**
+- Modern, intuitive Streamlit UI
+- Real-time progress tracking
+- Tab-based results display
+- Clean, professional design
 
+---
+
+## 🎯 Use Cases
+
+✅ Content creators planning new articles
+✅ SEO professionals optimizing existing content
+✅ Marketing teams analyzing competitors
+✅ Content agencies managing multiple clients
+✅ E-commerce teams improving product pages
+
+---
+
+## 📦 Prerequisites
+
+- **Python 3.11+**
+- **Groq API Key** (Free tier available at [console.groq.com](https://console.groq.com))
+- **SerpAPI Key** (Get it from [serpapi.com](https://serpapi.com))
+- 128MB free disk space
+
+---
+
+## ⚙️ Installation
+
+### 1️⃣ Clone the Repository
 ```bash
-cd advance_ai_agents/content_team_agent
+git clone https://github.com/Tanishbelel/TextContent_Generation_model.git
+cd content_team_agent
 ```
 
-2. Install dependencies:
-
+### 2️⃣ Create Virtual Environment
 ```bash
-# Using uv (recommended)
-uv sync
+# Windows
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
 
-# Or using pip
+# macOS/Linux
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+### 3️⃣ Install Dependencies
+```bash
 pip install -e .
 ```
 
-3. Set up environment variables:
-
-Create a `.env` file in the project root:
-
-```bash
-NEBIUS_API_KEY=your_nebius_api_key_here
+### 4️⃣ Setup Environment Variables
+Create `.env` file in the project root:
+```env
+GROQ_API_KEY=your_groq_api_key_here
 SERPAPI_API_KEY=your_serpapi_key_here
 ```
 
-## Usage
+✅ **Never commit `.env` file** — It's automatically in `.gitignore`
 
-### Streamlit UI (Recommended)
+---
 
-Launch the interactive web interface:
+## 🚀 Quick Start
 
+### Launch the Web App
 ```bash
-uv run streamlit run app.py
-# or with pip
 streamlit run app.py
 ```
 
-The UI provides:
+The app will open in your browser at `http://localhost:8501`
 
-- **Sidebar Configuration**: Enter your API keys and choose input method
-- **Main Area**: Enter your topic, URL, or article content
-- **Real-time Progress**: See which step is currently processing
-- **Results Display**: All reports displayed in a clean, flowing document format
+### 3 Easy Steps:
 
-### Input Methods
+1. **Configure API Keys** (left sidebar)
+2. **Choose Analysis Mode**:
+   - 📝 Pre-Writing Brief
+   - 🔗 Existing Article URL
+   - ✏️ Title + Content
+3. **Click "Generate Optimization Analysis"** and wait for results
 
-1. **Topic Only (Pre-Writing Brief)**
+---
 
-   - Enter a topic you want to write about
-   - Get comprehensive SEO content brief with keywords, structure, and guidelines
+## 📖 Usage Guide
+
+### Mode 1: Pre-Writing Brief
+Perfect for planning new content before you write.
+
+```
+Input: Your topic/keyword
+Output:
+├── Keyword research & clustering
+├── Content structure & outline
+├── FAQ opportunities
+└── Writing guidelines
+```
+
+### Mode 2: Content Optimization
+Improve existing articles for better rankings.
+
+```
+Input: Article URL or Title + Content
+Output:
+├── Search insights
+├── Content audit
+├── Optimization recommendations
+└── Section-level rewrites
+```
+
+---
+
+## 📊 Output Reports
+
+ContentFlow generates comprehensive reports organized in tabs:
+
+| Tab | Content | Use Case |
+|-----|---------|----------|
+| 🔍 Keywords | Keyword research, clustering, search intent | Planning strategy |
+| 📊 Analysis | Content audit, gaps, opportunities | Identifying improvements |
+| 📋 Brief | Content outline, structure, guidelines | Pre-writing preparation |
+| ✏️ Rewrites | AI-optimized section rewrites | Direct optimization |
+
+---
+
+## 🎓 Examples
+
+### Example 1: Pre-Writing Brief
+```
+Topic: "Advanced Python async programming"
+
+Results:
+✓ Primary keywords with search volume
+✓ Semantic keyword clustering
+✓ FAQ questions readers ask
+✓ Recommended article structure
+✓ Writing guidelines
+```
+
+### Example 2: Content Optimization
+```
+URL: https://example.com/python-async
+
+Results:
+✓ Current keyword coverage analysis
+✓ Missing optimization opportunities
+✓ Competitor comparison insights
+✓ Rewritten sections with improvements
+✓ E-E-A-T enhancement suggestions
+```
+
+---
+
+## 🏗️ Architecture
+
+```
+ContentFlow
+├── Frontend (Streamlit)
+│   ├── Hero header & stats
+│   ├── API configuration
+│   └── Tab-based results
+├── Workflow Engine (Agno)
+│   ├── Keyword research
+│   ├── Content analysis
+│   ├── Competitor analysis
+│   └── Content generation
+└── APIs
+    ├── Groq (AI Analysis)
+    └── SerpAPI (Search Data)
+```
+
+---
+
+## 🔧 Configuration
+
+### Environment Variables
+```env
+GROQ_API_KEY=gsk_...           # Groq API key
+SERPAPI_API_KEY=...            # SerpAPI key
+```
+
+### Customization
+Edit `pyproject.toml` to add/remove dependencies or modify configuration.
+
+---
+
+## 📈 Performance Tips
+
+- **Faster Analysis**: Use pre-write mode for new content (fewer dependencies)
+- **Better Results**: Provide detailed, actual content for optimization mode
+- **API Optimization**: Reuse session to avoid repeated authentication
+
+---
+
+## 🐛 Troubleshooting
+
+### "API key not found"
+```bash
+# Check .env file exists
+ls -la .env
+
+# Verify variables are correct
+cat .env
+```
+
+### "Model not supported"
+Update your Groq model in code, or check [Groq documentation](https://console.groq.com/docs/models)
+
+### "Connection timeout"
+- Check internet connection
+- Verify API keys are valid
+- Try again with simpler input
+
+---
+
+## 📝 Project Structure
+
+```
+content_team_agent/
+├── app.py                      # Main Streamlit app
+├── main.py                     # Workflow definitions
+├── tools.py                    # Tool implementations
+├── pyproject.toml              # Dependencies & config
+├── .env.example                # Example environment file
+├── .gitignore                  # Git ignore rules
+└── README.md                   # This file
+```
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Here's how:
+
+1. Fork the repository
+2. Create feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit changes (`git commit -m 'Add amazing feature'`)
+4. Push to branch (`git push origin feature/amazing-feature`)
+5. Open Pull Request
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙋 Support
+
+- 📧 **Issues**: [GitHub Issues](https://github.com/Tanishbelel/TextContent_Generation_model/issues)
+- 💬 **Discussions**: [GitHub Discussions](https://github.com/Tanishbelel/TextContent_Generation_model/discussions)
+- 📖 **Documentation**: Check inline code comments
+
+---
+
+## ⭐ Show Your Support
+
+If you find ContentFlow helpful, please give it a star! ⭐
+
+---
+
+**Made with ❤️ for content creators and SEO professionals**
 
 2. **URL to Existing Article**
 
