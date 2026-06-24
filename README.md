@@ -477,18 +477,5 @@ Content Audit → Section Optimization → Improved Article
 
 ## Contributing
 
-This project is part of the [awesome-llm-apps](https://github.com/arindammajumder/awesome-llm-apps) collection. Contributions are welcome!
+This project is part of the [awesome-llm-apps](https://github.com/arindammajumder/awesome-llm-apps) collection. Contributions are welcome.
 
-## License
-
-Part of the awesome-llm-apps repository. See main repository for license information.
-
-## Credits
-
-Developed with ❤️ by [Arindam Majumder](https://www.youtube.com/c/Arindam_1729)
-
-Powered by:
-
-- [Agno](https://github.com/phidatahq/agno) - Multi-agent framework
-- [Nebius Token Factory](https://dub.sh/nebius) - LLM inference
-- [SerpAPI](https://serpapi.com/) - Google search results
